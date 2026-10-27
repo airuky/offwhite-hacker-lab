@@ -1,0 +1,1071 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!--
+MIT License
+
+Copyright (c) 2026 airuky
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+-->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="白です。知らんけど。米・バナナ・エビ・鳩からハッカーの色を厳正に決めつける、根拠ゼロの診断研究所。">
+  <title>オフホワイトハッカー研究所 — あなたは何色？</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f3f0e8'/%3E%3Cpath d='M14 41h36M20 38l5-20h14l5 20' fill='none' stroke='%231a1c1b' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+  <style>
+    :root{--paper:#f6f5f0;--ink:#202320;--muted:#70746c;--line:#d9dbd2;--accent:#d5ef72;--swatch:#f3f0e8;--card-ink:#202320;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;--sans:"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif;--spectrum:linear-gradient(90deg,#fff 0%,#fafaf7 8%,#f3f0e8 17%,#e7dece 25%,#d8d8d4 33%,#b7b9b8 42%,#8d9392 50%,#6c7374 58%,#4b565d 67%,#363a3c 75%,#252a2d 83%,#15191d 92%,#000000 100%)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.65;-webkit-font-smoothing:antialiased}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed}a{color:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #738c27;outline-offset:5px}button{color:inherit}button svg,a svg{flex-shrink:0}svg{display:block}button, a, input{touch-action:manipulation}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.mono{font-family:var(--mono)}.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.11em;line-height:1.5}.muted{color:var(--muted)}.shell{max-width:1264px;margin:auto;padding:0 48px}.icon{width:18px;height:18px;stroke:currentColor;stroke-width:1.6;fill:none;stroke-linecap:round;stroke-linejoin:round}.skip{position:fixed;top:-100px;left:16px;padding:10px;background:var(--accent);z-index:99}.skip:focus{top:16px}.topbar{height:88px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;gap:12px;align-items:center;text-decoration:none}.brand-mark{width:38px;height:38px;position:relative}.brand-mark::before,.brand-mark::after{content:"";position:absolute;width:25px;height:25px;border:1.5px solid var(--ink);border-radius:4px}.brand-mark::before{top:1px;left:1px;background:var(--paper)}.brand-mark::after{right:0;bottom:0;background:var(--ink)}.brand-title{font-size:14px;font-weight:800;letter-spacing:.02em}.brand-sub{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--muted)}.top-right{display:flex;gap:26px;align-items:center}.lab-status{display:flex;gap:7px;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.05em}.status-dot{height:6px;width:6px;background:#667c29;border-radius:50%;box-shadow:0 0 0 4px #e7ebdd}.plain-button{border:0;background:transparent;padding:9px 0;display:inline-flex;align-items:center;gap:7px;font-size:11px;color:#52574e}.plain-button:hover{color:var(--ink);text-decoration:underline;text-underline-offset:4px}.hero{padding:48px 0 31px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px}.edition{display:flex;align-items:center;gap:9px;margin-bottom:15px}.edition span:first-child{background:var(--accent);border-radius:3px;padding:4px 8px;color:#313d12}.edition .eyebrow:last-child{color:var(--muted)}h1{font-size:clamp(34px,4.3vw,57px);letter-spacing:-.055em;line-height:1.38;margin:0;font-weight:850}h1 .gray{color:#85897f}.hero-side{max-width:280px;padding-bottom:7px}.hero-side p{margin:0;font-size:13px;line-height:1.95}.hero-side .micro{font-size:10px;color:var(--muted);margin-top:13px}.spectrum-wrap{position:relative}.spectrum-track{height:17px;border-radius:3px;background:var(--spectrum);border:1px solid rgba(30,30,30,.08)}.spectrum-labels{display:flex;justify-content:space-between;font:9px var(--mono);color:var(--muted);letter-spacing:.06em;margin:9px 0 0}.spectrum-labels span:nth-child(2){margin-left:-14%}.spectrum-labels span:nth-child(3){margin-left:-9%}.workbench{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:59px;padding:37px 0 45px}.controls{min-width:0}.tablist{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--line);gap:6px;margin-bottom:26px}.tab{border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;display:flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap;padding:13px 3px 15px;color:#787c73;font-size:12px;font-weight:700}.tab .mono{font-size:10px;font-weight:400;opacity:.7}.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}.tab:hover{color:var(--ink)}.tab-panel{min-height:452px}.panel-kicker{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.panel-kicker .eyebrow{color:var(--muted)}.step-counter{font:12px var(--mono)}.step-counter span{color:#989b94}.progress{display:flex;gap:5px;margin-top:-6px;margin-bottom:24px}.progress span{height:3px;border-radius:2px;background:#e1e3da;flex:1;transition:background .2s}.progress span.done{background:var(--ink)}.progress span.current{background:#9fa881}h2{font-size:21px;line-height:1.75;letter-spacing:-.04em;margin:0 0 8px;font-weight:800}.panel-intro{font-size:12px;color:var(--muted);margin:0 0 20px}.question-caption{font-size:11px;color:var(--muted);margin:0 0 19px}.choices{display:grid;gap:9px;min-width:0;margin:0;padding:0;border:0}.choice{position:relative;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.45);border:1px solid var(--line);border-radius:7px;min-height:58px;padding:12px 14px;font-size:12px;line-height:1.6;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}.choice:hover{border-color:#a0a594;background:#fff;transform:translateX(2px)}.choice:has(input:checked){background:#e9efda;border-color:#7c885e}.choice:has(input:focus-visible){outline:3px solid #738c27;outline-offset:3px}.choice input{position:absolute;opacity:0;width:1px;height:1px}.choice-key{display:flex;align-items:center;justify-content:center;font:10px var(--mono);height:24px;width:24px;border:1px solid #d4d8ca;border-radius:4px;flex:0 0 24px;background:#fff9}.choice:has(input:checked) .choice-key{background:var(--ink);border-color:var(--ink);color:#fff}.choice-check{margin-left:auto;height:17px;width:17px;border:1px solid #cbd0c1;flex:0 0 17px;border-radius:50%;position:relative}.choice:has(input:checked) .choice-check{background:var(--ink);border-color:var(--ink)}.choice:has(input:checked) .choice-check::after{content:"";position:absolute;width:6px;height:3px;border-left:1.5px solid white;border-bottom:1.5px solid white;left:4px;top:4px;transform:rotate(-45deg)}.question-actions{display:flex;align-items:center;justify-content:space-between;margin-top:22px;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;border-radius:6px;padding:11px 19px;font-size:12px;font-weight:700;border:1px solid transparent;text-decoration:none;transition:background .15s,transform .15s}.btn:hover{transform:translateY(-1px)}.btn:active{transform:translateY(0)}.btn-dark{background:var(--ink);color:white}.btn-dark:hover{background:#3a4035}.btn-dark:disabled{background:#dfe1d8;color:#989d90;transform:none}.btn-ghost{background:transparent;border-color:var(--line);color:var(--ink)}.btn-ghost:hover{background:#eeeee7;border-color:#aeb5a2}.back-btn{border:0;background:none;display:flex;align-items:center;gap:6px;color:var(--muted);font-size:11px;padding:9px 0}.back-btn:disabled{opacity:.38}.micro-hint{font-size:10px;color:var(--muted);margin-top:17px;display:flex;align-items:center;gap:5px}.completion{padding:16px 0}.completion-mark{display:grid;place-items:center;background:var(--accent);border:1px solid #9caf53;border-radius:50%;width:52px;height:52px;margin-bottom:22px}.completion h2{font-size:26px}.completion p{max-width:340px;font-size:13px;line-height:1.9;color:#666d60}.completion .btn{margin-top:16px}.mini-summary{display:flex;margin:25px 0 12px;gap:7px}.mini-summary span{height:32px;flex:1;border:1px solid #d6d8d0;border-radius:4px}.field-label{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:700;margin-bottom:8px}.field-label small{font-weight:400;color:var(--muted);font-size:10px}.name-input{width:100%;min-height:53px;border:1px solid #cbd0c1;border-radius:6px;background:#ffffffad;padding:13px 15px;color:var(--ink);font-size:15px}.name-input::placeholder{font-size:12px;color:#9a9e95}.input-help{font-size:10px;color:var(--muted);min-height:18px;margin:7px 0 17px}.input-help.error{color:#9a3b28}.toggle-line{display:flex;align-items:center;gap:9px;font-size:12px;margin:14px 0 23px}.toggle-line input{width:16px;height:16px;accent-color:#333c25}.toggle-line small{font-size:10px;color:var(--muted)}.name-actions{display:grid;grid-template-columns:1fr auto;gap:9px}.note-box{margin-top:24px;border-top:1px solid var(--line);padding-top:19px;display:flex;align-items:flex-start;gap:11px}.note-box p{font-size:11px;color:var(--muted);margin:0;line-height:1.9}.note-box .eyebrow{background:#e7e8df;border-radius:3px;padding:3px 6px;flex:0 0 auto;color:#63685b}.mix-readout{display:flex;align-items:baseline;justify-content:space-between;margin:25px 0 18px}.mix-readout label{font-size:12px}.mix-readout output{font:38px var(--mono);letter-spacing:-.06em}.mix-readout output span{font-size:14px;color:var(--muted);margin-left:4px}.range-wrap{padding:8px 0 2px}.shade-range{appearance:none;-webkit-appearance:none;width:100%;height:16px;border:1px solid #d3d7cc;border-radius:4px;background:var(--spectrum);cursor:ew-resize;margin:0}.shade-range::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:18px;height:33px;background:#fff;border:3px solid var(--ink);border-radius:4px;box-shadow:0 1px 4px #0002}.shade-range::-moz-range-thumb{width:14px;height:27px;background:white;border:3px solid var(--ink);border-radius:4px}.range-labels{display:flex;justify-content:space-between;font:9px var(--mono);color:var(--muted);margin:12px 0 22px}.preset-label{font-size:11px;color:var(--muted);margin:0 0 10px}.presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:21px}.preset{width:30px;height:30px;border:1px solid #bfc4b8;border-radius:50%;position:relative;transition:transform .15s}.preset:hover{transform:scale(1.15)}.preset[aria-pressed="true"]::after{content:"";position:absolute;inset:-4px;border:1px solid var(--ink);border-radius:50%}.mixer-actions{display:flex;flex-wrap:wrap;gap:8px}.mixer-footer{display:flex;align-items:center;gap:7px;margin-top:19px;font-size:10px;color:var(--muted)}.result-column{min-width:0}.result-top{display:flex;align-items:center;justify-content:space-between;margin:6px 0 16px}.result-top .eyebrow{color:#656b5e}.result-state{font-size:10px;background:#e6e8df;border-radius:12px;padding:3px 10px;color:#63695d}.result-state.ready{background:#e2ecbe;color:#465225}.result-card{background:#fffef9;border:1px solid #cfd3c6;border-radius:10px;overflow:hidden;box-shadow:0 4px 0 #e8e9e0;transition:box-shadow .3s}.result-visual{height:230px;position:relative;overflow:hidden;background:var(--swatch);color:var(--card-ink);transition:background .35s,color .35s;padding:20px 22px}.visual-meta{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2;font:9px var(--mono);letter-spacing:.06em;opacity:1}.swatch-code{font-size:11px}.visual-grid{position:absolute;inset:0;background-image:radial-gradient(currentColor .55px,transparent .55px);background-size:13px 13px;opacity:.09;mask-image:linear-gradient(120deg,#000,transparent 65%)}.visual-word{position:absolute;bottom:10px;left:20px;font-family:Arial,Helvetica,sans-serif;font-size:50px;font-weight:900;line-height:.88;letter-spacing:-.055em;max-width:75%;opacity:.12;pointer-events:none}.hacker-art{position:absolute;left:50%;top:49%;width:155px;height:155px;transform:translate(-50%,-43%);stroke:currentColor;fill:none;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.visual-note{position:absolute;right:19px;bottom:17px;font:9px var(--mono);writing-mode:vertical-rl;letter-spacing:.13em;opacity:1}.corner-plus{position:absolute;left:21px;bottom:22px;font:18px var(--mono);opacity:.5}.result-content{padding:24px 25px 21px}.result-owner{font-size:10px;color:var(--muted);margin:0 0 6px;overflow-wrap:anywhere}.result-title{font-size:clamp(22px,2.6vw,32px);letter-spacing:-.055em;line-height:1.35;margin:0 0 6px;font-weight:850}.result-title .hacker-line{display:block;font-size:.62em;letter-spacing:.03em;margin-top:4px}.result-tag{font-size:11px;display:inline-block;background:#edf0e5;padding:3px 8px;border-radius:3px;margin:9px 0 12px;color:#596249}.result-description{font-size:12px;line-height:1.9;min-height:44px;margin:0 0 18px;color:#646b5e}.result-meter-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:10px;margin-bottom:9px;color:#6c7363}.result-meter-head strong{font:23px var(--mono);color:var(--ink);letter-spacing:-.05em}.result-meter-head strong small{font-size:11px;margin-left:2px}.result-meter{height:6px;background:var(--spectrum);border-radius:2px;position:relative;border:1px solid #d4d8cd}.result-meter::after{content:"";position:absolute;width:8px;height:12px;top:-4px;border:2px solid var(--ink);background:var(--accent);border-radius:2px;left:clamp(0px,calc(var(--position,17%) - 4px),calc(100% - 8px));transition:left .3s}.result-footnote{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:13px;border-top:1px dashed #dce0d2;gap:10px;font-size:9px;color:#8a9081}.result-footnote .mono{white-space:nowrap}.result-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.result-actions .btn{min-height:42px;font-size:11px;padding:10px 8px}.result-actions .btn:first-child{border-color:#ccd2be}.result-actions .btn:last-child{background:var(--accent);border-color:#c5dc70}.result-actions .btn:last-child:hover{background:#cce75e}.specimen-strip{border-top:1px solid var(--line);padding:28px 0 33px}.strip-heading{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:17px;gap:12px}.strip-heading h2{font-size:12px;margin:0;letter-spacing:.04em}.strip-heading h2 .mono{color:var(--muted);font-size:9px;margin-right:10px;font-weight:400}.strip-heading p{margin:0;font-size:10px;color:var(--muted)}.specimens{display:grid;grid-template-columns:repeat(13,minmax(0,1fr));gap:8px}.specimen{padding:0;border:0;background:transparent;text-align:left;min-width:0}.specimen-color{display:block;height:38px;border-radius:4px;border:1px solid #cbd0c1;transition:transform .18s,box-shadow .18s;position:relative}.specimen:hover .specimen-color{transform:translateY(-3px);box-shadow:0 3px 0 #d7dbc9}.specimen[aria-pressed="true"] .specimen-color::after{content:"";position:absolute;bottom:4px;right:4px;width:5px;height:5px;border-radius:50%;background:var(--accent);border:1px solid #707758}.specimen-label{font:8px var(--mono);display:block;color:var(--muted);margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bottom-bar{border-top:1px solid var(--line);padding:19px 0 25px;display:flex;justify-content:space-between;align-items:center;gap:18px;font-size:10px;color:#808675}.bottom-bar p{margin:0}.footer-brand{font:9px var(--mono);letter-spacing:.09em}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:white;font-size:12px;padding:12px 21px;border-radius:7px;box-shadow:0 6px 24px #0002;opacity:0;pointer-events:none;transition:transform .2s,opacity .2s;z-index:50;max-width:calc(100% - 32px);width:max-content}.toast.show{opacity:1;transform:translate(-50%,0)}.copy-dialog{border:1px solid var(--line);border-radius:12px;padding:25px;width:min(470px,calc(100% - 32px));background:var(--paper)}.copy-dialog::backdrop{background:#20232077}.copy-dialog h2{font-size:18px}.copy-dialog p{font-size:12px;color:var(--muted)}.copy-dialog textarea{width:100%;height:170px;resize:vertical;border:1px solid var(--line);background:white;border-radius:5px;padding:12px;font:12px/1.8 var(--sans)}.copy-dialog .btn{margin-top:12px;float:right}.noscript{padding:20px;background:#fff2d4;border:1px solid #d9bd86;margin:20px 0}.result-card.flash{animation:card-flash .4s ease-out}.enter{animation:enter .22s ease-out}@keyframes enter{from{opacity:.2;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@keyframes card-flash{0%{box-shadow:0 0 0 4px #b7d44f99}100%{box-shadow:0 4px 0 #e8e9e0}}@media(min-width:1100px){.result-column{padding-left:5px}.workbench{gap:66px}.tab-panel{min-height:463px}}@media(max-width:900px){.shell{padding:0 28px}.workbench{gap:29px;grid-template-columns:minmax(0,1fr) minmax(0,.95fr)}.top-right{gap:14px}.hero-side{max-width:240px}.result-content{padding:20px}.choice{padding:11px;font-size:11px}.hacker-art{width:145px;height:145px}.result-visual{height:215px}.visual-word{font-size:43px}.name-actions{grid-template-columns:1fr}.specimens{gap:6px}.specimen-label{font-size:7px}.tab{font-size:11px;gap:4px}}@media(max-width:680px){.shell{padding:0 20px}.topbar{height:73px}.brand-title{font-size:12px}.brand-sub{font-size:8px}.brand-mark{width:31px;height:31px}.brand-mark::before,.brand-mark::after{width:21px;height:21px}.top-right .lab-status{display:none}.plain-button{font-size:10px}.plain-button .icon{width:15px;height:15px}.hero{padding-top:31px;gap:20px;display:block}.hero h1{font-size:38px}.hero-side{max-width:100%;margin-top:19px;padding-bottom:0}.hero-side p{font-size:12px}.hero-side p br{display:none}.hero-side .micro{display:none}.edition{margin-bottom:13px}.edition .eyebrow{font-size:9px}.workbench{display:flex;flex-direction:column;gap:31px;padding-top:23px;padding-bottom:31px}.tablist{margin-bottom:23px}.tab{font-size:12px;padding-top:10px}.tab-panel{min-height:0}.choice{min-height:59px;font-size:12px;padding:12px}.question-caption{margin-bottom:18px}h2{font-size:20px}.question-actions{margin-top:18px}.result-top{margin-top:0}.result-visual{height:220px}.result-title{font-size:29px}.result-content{padding:22px}.result-description{min-height:0}.visual-word{font-size:50px}.hacker-art{width:155px;height:155px}.result-actions .btn{min-height:46px}.specimens{grid-template-columns:repeat(7,minmax(0,1fr));gap:13px 8px}.specimen-color{height:38px}.specimen-label{font-size:7px}.strip-heading{align-items:flex-start;flex-direction:column;gap:3px}.specimen-strip{padding:23px 0}.bottom-bar{align-items:flex-start;flex-direction:column;gap:8px}.name-actions{grid-template-columns:1fr auto}.panel-intro{font-size:12px}.completion{padding:6px 0 12px}.completion p{max-width:none}.toast{font-size:11px}.spectrum-labels{font-size:8px}}@media(max-width:370px){.shell{padding:0 15px}.hero h1{font-size:33px}.brand{gap:8px}.brand-title{font-size:11px}.plain-button{font-size:9px}.tab{font-size:11px;gap:5px}.name-actions{grid-template-columns:1fr}.choice{font-size:11px}.result-title{font-size:25px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+    /* Department of absolutely unsubstantiated claims. */
+    .hero{padding-top:37px;padding-bottom:26px}.hero h1{font-size:clamp(42px,5.1vw,68px)}
+    .bulletin{display:flex;align-items:center;gap:12px;margin:23px 0 0;padding:9px 12px;background:#ecefe2;border-left:3px solid #798b43;font-size:10px;color:#58633d}.bulletin strong{font:9px var(--mono);white-space:nowrap;color:#36441d}.bulletin span{overflow-wrap:anywhere}.nonsense-help{font-size:10px;line-height:1.8;color:var(--muted);margin-top:10px}.skip-quiz{display:flex;width:100%;justify-content:center;margin-top:15px;border:1px dashed #aeb59d;border-radius:5px;padding:10px 7px;background:transparent;color:#616c4a;font-size:11px;gap:6px}.skip-quiz:hover{background:#e8eddb;border-color:#667a3d}.research-receipt{margin-top:20px;padding:13px 15px;background:#ecefe5;font:11px/2 var(--mono);border-left:2px solid #98a575;color:#687454}.research-receipt strong{color:#394524}.fake-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid #e5e8dd}.fake-stat{font-size:9px;color:#6d7760}.fake-stat b{display:block;color:#333f22;font:700 18px/1.8 var(--mono)}.fake-stat:last-child b{font-family:var(--sans);font-size:15px}.white-stamp{position:absolute;right:33px;bottom:29px;border:3px double #b74f3f;color:#b74f3f;background:#fff9edee;box-shadow:0 2px 0 #fff5;font-size:21px;font-weight:900;letter-spacing:.06em;padding:5px 12px;transform:rotate(-12deg);z-index:3;white-space:nowrap}.white-stamp.pop{animation:stamp .28s ease-out}.claim-line{background:#fff6ed;border-left:3px solid #c97358;margin:16px 0 0;padding:10px 12px;color:#8b4330;font-size:12px;font-weight:700;line-height:1.8}.claim-line small{display:block;font-size:9px;font-weight:400;color:#936251;margin-top:3px}.nonsense-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}.nonsense-actions .btn{font-size:11px;padding:10px 7px}.nonsense-actions .btn:first-child{background:#fff1df;border-color:#d4aa86;color:#6f4b2d}.nonsense-actions .btn:last-child{background:#efeee7;border-color:#ccd0c3}.certificate-note{text-align:center;font-size:9px;color:#818875;margin:12px 0 0}.legal-dialog{width:min(460px,calc(100% - 30px));border:1px solid #c8cdbf;border-radius:10px;padding:28px;background:var(--paper);color:var(--ink)}.legal-dialog::backdrop{background:#20232088}.legal-dialog .eyebrow{color:#8c654f;margin-bottom:17px}.legal-dialog h2{font-size:23px;line-height:1.6;margin-bottom:15px}.legal-detail{font-size:12px;line-height:2;color:#707768;border-block:1px solid var(--line);padding:13px 0;margin:0 0 17px}.legal-dialog .dialog-actions{display:flex;flex-wrap:wrap;gap:8px}.legal-dialog .dialog-actions form{margin:0}.legal-dialog .btn{font-size:11px}.legal-foot{font-size:10px;color:#858b7a;margin-top:17px}.no-move{animation:none!important}@keyframes stamp{0%{transform:rotate(-12deg) scale(1.4);opacity:.3}100%{transform:rotate(-12deg) scale(1);opacity:1}}@media(max-width:680px){.hero h1{font-size:48px}.bulletin{font-size:9px;align-items:flex-start;margin-top:18px;gap:8px}.workbench{padding-top:19px}.white-stamp{font-size:18px;right:22px;bottom:23px}.fake-stat b{font-size:17px}.fake-stat:last-child b{font-size:14px}.legal-dialog{padding:22px}.legal-dialog h2{font-size:21px}.hero-side p br{display:block}.hero-side .micro{display:block;margin-top:9px}.result-title{font-size:26px}}@media(prefers-reduced-motion:reduce){.white-stamp.pop{animation:none}}
+
+    /* A professionally unreasonable number of almost-identical whites. */
+    #color-atlas,#result-card{scroll-margin-top:20px}.shade-stepper{display:grid;grid-template-columns:40px minmax(0,1fr) 40px;gap:10px;align-items:center;margin:19px 0 22px;padding:12px 0;border-block:1px solid var(--line)}.shade-stepper .btn{padding:5px;min-height:38px;font-size:17px}.shade-stepper .btn:disabled{opacity:.3;transform:none}.shade-stepper>div{text-align:center;min-width:0}.shade-stepper .eyebrow{display:block;color:#7d866d;font-size:9px}.shade-stepper strong{font-size:13px;display:block;margin-top:3px;overflow-wrap:anywhere}.preset-label{display:flex;justify-content:space-between;align-items:center;gap:8px}.preset-label a{font-size:10px;text-underline-offset:3px}.specimen-strip{padding-top:30px}.strip-heading h2{font-size:16px}.strip-heading p{font-size:11px}.atlas-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:20px 0 15px;flex-wrap:wrap}.atlas-filters{display:flex;flex-wrap:wrap;gap:7px}.atlas-filter{border:1px solid #cbd0c1;border-radius:5px;background:transparent;padding:8px 12px;font-size:11px;color:#5b654d;white-space:nowrap}.atlas-filter span{font:10px var(--mono);margin-left:5px;opacity:.7}.atlas-filter[aria-pressed="true"]{background:var(--ink);color:#f6f5f0;border-color:var(--ink)}.atlas-filter:hover{border-color:#68794b}.atlas-search input{border:1px solid #cbd0c1;border-radius:5px;padding:8px 12px;background:#fff8;min-height:36px;width:220px;color:var(--ink);font-size:11px}.atlas-preview{position:sticky;top:10px;z-index:5;display:flex;align-items:center;gap:13px;padding:14px 16px;border:1px solid #cbd0c1;border-radius:6px;background:#f8f8f1;box-shadow:0 3px 0 #e5e8db;margin-bottom:13px;min-height:89px}.atlas-preview-chip{height:52px;width:52px;flex:0 0 52px;border-radius:5px;border:1px solid #b6bfaa}.atlas-preview-copy{display:flex;flex-direction:column;min-width:0;gap:3px;flex:1}.atlas-preview-copy .eyebrow{font-size:9px;color:#737f61}.atlas-preview-copy strong{font-size:15px;line-height:1.6;overflow-wrap:anywhere}.atlas-preview-copy>span:last-child{font-size:11px;color:#677158;line-height:1.7}.atlas-result-link{font-size:10px;white-space:nowrap;text-underline-offset:3px}.atlas-count-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:10px;color:#78826c;margin:13px 0}.atlas-count-row p{margin:0;font-family:var(--mono)}.specimens{grid-template-columns:repeat(8,minmax(0,1fr));gap:15px 12px}.specimen{padding:0 0 7px;border-radius:5px;min-width:0;align-self:start}.specimen-color{height:60px;border-color:#c5cdb7;display:flex;align-items:flex-start;justify-content:space-between;padding:7px;position:relative}.specimen-number{font:10px var(--mono)}.specimen-percent{font:9px var(--mono);opacity:.8}.specimen-label{font-family:var(--sans);font-size:10px;color:#4b5740;white-space:normal;line-height:1.6;min-height:32px;margin-top:7px;overflow:visible;text-overflow:clip;overflow-wrap:anywhere}.specimen-hex{display:block;font:8px var(--mono);color:#8b937f;margin-top:3px}.specimen[aria-pressed="true"] .specimen-color{outline:2px solid #70844d;outline-offset:3px}.specimen[aria-pressed="true"] .specimen-label{font-weight:800}.specimen[aria-pressed="true"] .specimen-color::after{bottom:6px;right:6px;width:7px;height:7px}.atlas-empty{padding:36px 15px;text-align:center;border:1px dashed #c4cbb8;border-radius:5px;font-size:12px;color:#768368}.atlas-empty button{display:block;margin:13px auto 0;background:transparent;border:0;text-decoration:underline;text-underline-offset:3px;font-size:11px;color:#4c5a3d}.result-title{overflow-wrap:anywhere}@media(max-width:900px){.specimens{grid-template-columns:repeat(6,minmax(0,1fr));gap:14px 10px}.atlas-preview-copy>span:last-child{font-size:10px}.strip-heading{align-items:flex-start;flex-direction:column;gap:5px}.atlas-search{flex:1}.atlas-search input{width:100%;min-width:150px}}@media(max-width:680px){.specimens{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px 9px}.specimen-color{height:52px;padding:6px}.specimen-label{font-size:10px;min-height:32px}.specimen-percent{font-size:8px}.specimen-hex{font-size:8px}.strip-heading h2{font-size:15px;line-height:1.8}.strip-heading h2 .mono{display:block;margin-bottom:3px}.atlas-controls{display:block;margin-top:16px}.atlas-filters{gap:6px;margin-bottom:11px}.atlas-filter{font-size:10px;padding:7px 8px}.atlas-filter span{font-size:9px;margin-left:3px}.atlas-search input{width:100%}.atlas-preview{top:7px;gap:9px;padding:11px 10px;align-items:flex-start}.atlas-preview-chip{width:36px;height:36px;flex-basis:36px;margin-top:2px}.atlas-preview-copy strong{font-size:12px}.atlas-preview-copy .eyebrow{font-size:8px;letter-spacing:0}.atlas-preview-copy>span:last-child{font-size:10px}.atlas-result-link{font-size:9px;writing-mode:vertical-rl;margin-top:4px}.atlas-count-row{font-size:9px}.shade-stepper strong{font-size:12px}.preset-label{font-size:10px}.preset-label a{font-size:9px}}@media(max-width:370px){.atlas-filter{font-size:9px;padding:7px 6px}.specimen-color{height:45px;padding:5px}.specimen-number{font-size:9px}.specimen-percent{font-size:7px}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#workbench">診断へ移動</a>
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 16v4h14v-4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H4v13h4"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M4 6h3c4 0 6 12 10 12h3m-3-3 3 3-3 3M4 18h3c1 0 2-1 3-3m4-6c1-2 2-3 3-3h3m-3-3 3 3-3 3"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 8a8 8 0 1 0 0 8M20 3v5h-5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m5-5-5 5 5 5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></symbol>
+</defs></svg>
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="オフホワイトハッカー研究所 トップ"><span class="brand-mark" aria-hidden="true"></span><span><span class="brand-title">オフホワイトハッカー研究所</span><span class="brand-sub" style="display:block">OFF-WHITE HACKER LAB.</span></span></a>
+    <div class="top-right"><span class="lab-status"><span class="status-dot"></span>法務：有休</span><button class="plain-button" id="download-html"><svg class="icon"><use href="#i-download"/></svg>HTMLを保存</button></div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div><div class="edition"><span class="eyebrow">第三者機関（自分）</span><span class="eyebrow">SCIENTIFIC-ISH RESEARCH</span></div><h1 id="hero-title">白です。<br><span class="gray">知らんけど。</span></h1></div>
+      <div class="hero-side"><p>ハッカーの色を厳正に診断します。<br>厳正の定義は、当研究所が決めます。<br>なお、研究員は全員バナナです。</p><p class="micro">科学的根拠：ない。自信：ある。</p></div>
+    </section>
+    <div class="spectrum-wrap" aria-hidden="true"><div class="spectrum-track"></div><div class="spectrum-labels"><span>PURE WHITE</span><span>OFF-WHITE</span><span>GRAY AREA</span><span>PURE BLACK</span></div></div>
+    <noscript><p class="noscript">この診断で遊ぶには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+    <div class="bulletin"><strong>研究所からのお知らせ</strong><span id="lab-bulletin">白の分類が増えすぎたため、白だけで28部署できました。全員、鳩です。</span></div>
+    <section class="workbench" id="workbench" aria-label="ハッカーカラー診断">
+      <div class="controls">
+        <div class="tablist" role="tablist" aria-label="遊び方を選ぶ">
+          <button class="tab" role="tab" id="tab-quiz" aria-controls="panel-quiz" aria-selected="true" data-mode="quiz"><span class="mono">01</span>6問で診断</button>
+          <button class="tab" role="tab" id="tab-name" aria-controls="panel-name" aria-selected="false" tabindex="-1" data-mode="name"><span class="mono">02</span>名前で生成</button>
+          <button class="tab" role="tab" id="tab-mix" aria-controls="panel-mix" aria-selected="false" tabindex="-1" data-mode="mix"><span class="mono">03</span>色を調合</button>
+        </div>
+        <section class="tab-panel" role="tabpanel" id="panel-quiz" aria-labelledby="tab-quiz">
+          <div id="quiz-questions"><div class="panel-kicker"><span class="eyebrow">SERIOUSLY. DO NOT THINK.</span><span class="step-counter" id="step-counter">01 <span>/ 06</span></span></div><div class="progress" id="quiz-progress" aria-hidden="true"></div><h2 id="question-title" tabindex="-1"></h2><p class="question-caption" id="question-caption">適当で大丈夫です。こちらも適当です。</p><fieldset class="choices" id="choices" aria-labelledby="question-title"></fieldset><div class="question-actions"><button class="back-btn" id="prev-question" disabled><svg class="icon"><use href="#i-back"/></svg>前の質問</button><button class="btn btn-dark" id="next-question" disabled><span>次の質問</span><svg class="icon"><use href="#i-arrow"/></svg></button></div><button type="button" class="skip-quiz" id="skip-quiz">🕊 全問めんどいので鳩に任せる</button><p class="micro-hint"><svg class="icon" style="width:12px;height:12px"><use href="#i-spark"/></svg>この質問とハッカーの色の関係：調査していません。</p></div>
+          <div id="quiz-complete" class="completion" hidden><div class="completion-mark"><svg class="icon" style="width:28px;height:28px"><use href="#i-check"/></svg></div><div class="eyebrow muted" style="margin-bottom:9px">STRICTLY APPROVED BY A PIGEON</div><h2 tabindex="-1" id="complete-title">厳正に決めつけました。</h2><p id="complete-description">あなたの回答から、ひとつの色が見つかりました。結果は色見本カードでどうぞ。</p><div class="research-receipt"><div>✓ 米の意思を尊重しました</div><div>✓ バナナの本人確認を省略しました</div><div>✓ エビへの敬意を数値化しました</div><strong>✓ 全会一致で可決（鳩1羽）</strong></div><div class="mini-summary" id="answer-swatches" aria-label="6問の回答の色"></div><p class="micro-hint">米・バナナ・エビから、なぜか確信を得ました。</p><button class="btn btn-ghost" id="restart-quiz"><svg class="icon"><use href="#i-refresh"/></svg>都合のいい結果が出るまで</button></div>
+        </section>
+        <section class="tab-panel" role="tabpanel" id="panel-name" aria-labelledby="tab-name" hidden>
+          <div class="panel-kicker"><span class="eyebrow">YOUR NAME, YOUR SHADE</span><span class="eyebrow muted">SEED-BASED</span></div><h2>名前だけで決めつける。</h2><p class="panel-intro">姓名判断ですらない、ただの文字列への偏見です。</p>
+          <form id="name-form"><label class="field-label" for="codename">あなたの名前<small>24文字まで</small></label><input class="name-input" id="codename" name="codename" type="text" placeholder="例：名無しのハッカー" maxlength="48" autocomplete="off" aria-describedby="name-help"><p class="input-help" id="name-help">同じ名前なら、同じ結果になります。</p><label class="toggle-line"><input type="checkbox" id="daily-mode">今日の色にする <small id="daily-date"></small></label><div class="name-actions"><button class="btn btn-dark" type="submit">名前だけで決めつける<svg class="icon"><use href="#i-arrow"/></svg></button><button class="btn btn-ghost" type="button" id="name-random"><svg class="icon"><use href="#i-shuffle"/></svg>乱数に責任転嫁</button></div></form>
+          <div class="note-box"><span class="eyebrow">LAB NOTE</span><p>名前の文字列を、色へ変換します。<br>「今日の色」は毎日0時（日本時間）に変わります。</p></div><p class="micro-hint">入力した名前は、このページの外へ送信しません。</p>
+        </section>
+        <section class="tab-panel" role="tabpanel" id="panel-mix" aria-labelledby="tab-mix" hidden>
+          <div class="panel-kicker"><span class="eyebrow">MAKE YOUR OWN SHADE</span><span class="eyebrow muted">SELF-DECLARED</span></div><h2>白さは、声のデカさで。</h2><p class="panel-intro">診断結果が気に入らない？ では現実のほうを変えましょう。</p><div class="mix-readout"><label for="shade-range">ハッカー濃度</label><output for="shade-range" id="shade-output">17.0<span>%</span></output></div><div class="range-wrap"><input class="shade-range" id="shade-range" type="range" min="0" max="100" step="0.1" value="17" aria-valuetext="17.0%、オフホワイト"></div><div class="range-labels"><span>0% / WHITE</span><span>100% / BLACK</span></div><div class="shade-stepper"><button class="btn btn-ghost" type="button" id="shade-prev" aria-label="ひとつ白い色名へ">←</button><div><span class="eyebrow" id="shade-index">001 / 064</span><strong id="shade-name">オフホワイト</strong></div><button class="btn btn-ghost" type="button" id="shade-next" aria-label="ひとつ黒い色名へ">→</button></div><p class="preset-label">代表13色から選ぶ <a href="#color-atlas">全64色の図鑑へ ↗</a></p><div class="presets" id="presets" aria-label="ハッカーカラーのプリセット"></div><div class="mixer-actions"><button class="btn btn-dark" id="mix-random"><svg class="icon"><use href="#i-shuffle"/></svg>乱数に責任転嫁</button><button class="btn btn-ghost" id="almost-white">緊急ホワイト化</button></div><p class="mixer-footer"><svg class="icon" style="width:13px;height:13px"><use href="#i-spark"/></svg>客観的な黒さを調整できます。主観的には常に白です。</p>
+        </section>
+      </div>
+      <aside class="result-column" aria-label="ハッカーカラー結果">
+        <div class="result-top"><span class="eyebrow">SELF-CERTIFIED INNOCENCE</span><span class="result-state" id="result-state">サンプル / 診断前</span></div>
+        <article class="result-card" id="result-card">
+          <div class="result-visual" id="result-visual"><div class="visual-grid"></div><div class="visual-meta"><span id="specimen-id">SPECIMEN / 019 / 064</span><span class="swatch-code" id="hex-code">#F3F0E8</span></div><div class="visual-word" id="visual-word" aria-hidden="true">OFF<br>WHITE.</div>
+            <svg class="hacker-art" viewBox="0 0 160 160" aria-hidden="true"><path d="M28 132c3-18 11-30 25-36-8-6-12-16-12-29 0-28 17-46 39-46s39 18 39 46c0 13-4 23-12 29 14 6 22 18 25 36Z" fill="currentColor" fill-opacity=".035"/><path d="M51 71c0-19 13-32 29-32s29 13 29 32c0 23-12 38-29 38S51 94 51 71Z"/><path d="M53 62c8-2 16-6 27-14 11 8 19 12 27 14M57 78h17m12 0h17m-29 0h12M64 78v5m31-5v5M63 117l-4 15m38-15 4 15"/><path d="m75 118-5 5 5 5m10-10 5 5-5 5" stroke-width="1.8"/><path d="M75 92h10"/><path d="M27 43h9m-4.5-4.5v9M126 108h9m-4.5-4.5v9" stroke-width="1.3" opacity=".4"/></svg>
+            <span class="white-stamp" id="white-stamp" hidden>白（自称）</span><span class="visual-note" id="visual-note">ALMOST INNOCENT</span><span class="corner-plus" aria-hidden="true">+</span>
+          </div>
+          <div class="result-content"><p class="result-owner" id="result-owner">たとえば、こんな色。</p><h2 class="result-title"><span id="result-color">オフホワイト</span><span class="hacker-line">ハッカー</span></h2><span class="result-tag" id="result-tag">白です。弊社調べでは。</span><p class="result-description" id="result-description">白に近いという点では、白とほぼ同じです。異論は聞こえません。</p><div class="result-meter-head"><span>ハッカー濃度</span><strong><span id="result-score">17.0</span><small>%</small></strong></div><div class="result-meter" id="result-meter" style="--position:17%" aria-hidden="true"></div><div class="fake-stats"><div class="fake-stat">判定への自信<b id="confidence">120%</b></div><div class="fake-stat">科学的根拠<b>0</b></div><div class="fake-stat">法務の見解<b id="legal-status">未読</b></div></div><div class="claim-line" id="claim-line" hidden><span id="claim-text"></span><small id="claim-count"></small></div><div class="result-footnote"><span id="result-footnote">※ 白さには個人差があります。</span><span class="mono">SOURCE: VIBES</span></div></div>
+        </article>
+        <div class="nonsense-actions"><button type="button" class="btn" id="claim-white">白だと言い張る</button><button type="button" class="btn" id="call-legal">法務を呼ぶ</button></div><div class="result-actions"><button class="btn btn-ghost" id="copy-result"><svg class="icon"><use href="#i-copy"/></svg>自称をコピー</button><button class="btn" id="save-image"><svg class="icon"><use href="#i-download"/></svg>証明書を発行</button></div><p class="certificate-note">この証明書に効力はありません。勢いはあります。</p><p class="sr-only" id="result-announcement" role="status" aria-live="polite"></p>
+      </aside>
+    </section>
+    <section class="specimen-strip" id="color-atlas" aria-labelledby="collection-title"><div class="strip-heading"><h2 id="collection-title"><span class="mono">THE 64 SHADES</span>白だけで28種類。そろそろ怒られろ。</h2><p>白28・グレー20・黒16。全員、白を主張しています。</p></div>
+      <div class="atlas-controls"><div class="atlas-filters" role="group" aria-label="色の系統で絞り込む"><button type="button" class="atlas-filter" data-family="all" aria-pressed="true">全部 <span>64</span></button><button type="button" class="atlas-filter" data-family="white" aria-pressed="false">白っぽい <span>28</span></button><button type="button" class="atlas-filter" data-family="gray" aria-pressed="false">揉めてる <span>20</span></button><button type="button" class="atlas-filter" data-family="black" aria-pressed="false">もう黒い <span>16</span></button></div><label class="atlas-search"><span class="sr-only">色名・言い訳を検索</span><input id="shade-search" type="search" placeholder="色名・言い訳を検索" maxlength="80" autocomplete="off"></label></div>
+      <div class="atlas-preview" id="atlas-preview"><span class="atlas-preview-chip" id="atlas-preview-chip" aria-hidden="true"></span><div class="atlas-preview-copy"><span class="eyebrow" id="atlas-preview-id">SPECIMEN / 001 OF 064</span><strong id="atlas-preview-name">オフホワイト</strong><span id="atlas-preview-description">白です。弊社調べでは。</span></div><a href="#result-card" class="atlas-result-link">証明書へ ↗</a></div>
+      <div class="atlas-count-row"><p id="atlas-count" role="status" aria-live="polite">64 / 64 色</p><span>押すと、その色を名乗ります。</span></div><div class="specimens" id="specimens"></div><div class="atlas-empty" id="atlas-empty" hidden>その言い訳は、まだ研究されていません。<button type="button" id="reset-atlas">全部見せろ</button></div></section>
+  </main>
+  <footer class="bottom-bar"><p>※ 全部ネタです。技術力も倫理観も測っていません。米の好みは把握しました。</p><span class="footer-brand">OFF-WHITE HACKER LAB. / v3.0 白が多すぎる</span></footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog class="copy-dialog" id="copy-dialog"><h2>結果のテキスト</h2><p>テキストを選択してコピーしてください。</p><textarea id="copy-text" readonly aria-label="コピーする診断結果"></textarea><form method="dialog"><button class="btn btn-dark">閉じる</button></form></dialog>
+<dialog class="legal-dialog" id="legal-dialog" aria-labelledby="legal-title"><div class="eyebrow">DEPARTMENT OF NOT MY PROBLEM</div><h2 id="legal-title">法務はログアウトしました。</h2><p class="legal-detail" id="legal-detail">最終確認地点：有給<br>復帰予定：この話が終わったあと<br>推奨される対応：自分で考える</p><div class="dialog-actions"><button class="btn btn-ghost" type="button" id="legal-retry">もう一度呼ぶ</button><form method="dialog"><button class="btn btn-dark">承知したことにする</button></form></div><p class="legal-foot">※ 脳内法務です。実際の誰にも連絡していません。</p></dialog>
+<script>
+'use strict';
+// One file, no network requests, no external dependencies.
+const COLOR_ANCHORS = [{"v": 0, "hex": "#FFFFFF"}, {"v": 8, "hex": "#FAFAF7"}, {"v": 17, "hex": "#F3F0E8"}, {"v": 25, "hex": "#E7DECE"}, {"v": 33, "hex": "#D8D8D4"}, {"v": 42, "hex": "#B7B9B8"}, {"v": 50, "hex": "#8D9392"}, {"v": 58, "hex": "#6C7374"}, {"v": 67, "hex": "#4B565D"}, {"v": 75, "hex": "#363A3C"}, {"v": 83, "hex": "#252A2D"}, {"v": 92, "hex": "#15191D"}, {"v": 100, "hex": "#000000"}];
+const COLORS = [
+ {
+  "v": 0,
+  "ja": "潔白ホワイト",
+  "en": "SNOW\nWHITE.",
+  "hex": "#FFFFFF",
+  "tag": "許可書を持った天使",
+  "desc": "許可を取るための許可を申請中。まだ何も始まっていない。",
+  "note": "白すぎて画像の読み込みに失敗したと思われます。",
+  "label": "PURE WHITE",
+  "mark": "NOTHING HAPPENED",
+  "anchor": true
+ },
+ {
+  "v": 0.8,
+  "ja": "白（仮）",
+  "tag": "本番環境では未確認",
+  "desc": "白として進めておきます。違ったら来週直します。",
+  "note": "来週の担当者：未定。",
+  "anchor": false,
+  "hex": "#FFFFFE",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 1.6,
+  "ja": "起動前ホワイト",
+  "tag": "無罪、まだ電源オフ",
+  "desc": "何もしていない実績だけで、認証を取得しました。",
+  "note": "実績更新まであとEnter一回。",
+  "anchor": false,
+  "hex": "#FEFEFD",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 2.6,
+  "ja": "無添加ホワイト",
+  "tag": "悪意不使用",
+  "desc": "悪意は添加していません。天然由来の好奇心です。",
+  "note": "好奇心の含有量は非公開。",
+  "anchor": false,
+  "hex": "#FDFDFC",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 3.6,
+  "ja": "白紙委任ホワイト",
+  "tag": "印鑑が先",
+  "desc": "中身を読む前に押印したので、まだ白いです。",
+  "note": "裏面の文字は対象外。",
+  "anchor": false,
+  "hex": "#FDFDFB",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 4.8,
+  "ja": "審査前ホワイト",
+  "tag": "未確認の清潔感",
+  "desc": "調べると何か出そうなので、調べる前の色を採用しました。",
+  "note": "本格的な測定は再来世。",
+  "anchor": false,
+  "hex": "#FCFCFA",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 5.8,
+  "ja": "洗いたてホワイト",
+  "tag": "柔軟剤の説得力",
+  "desc": "いい匂いがするので、だいたい正しい気がします。",
+  "note": "判断材料：フローラル。",
+  "anchor": false,
+  "hex": "#FBFBF9",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 6.8,
+  "ja": "白米ホワイト",
+  "tag": "炊飯器認証",
+  "desc": "倫理観の代わりに、水加減を厳しく管理しています。",
+  "note": "蒸らし時間を含みます。",
+  "anchor": false,
+  "hex": "#FBFBF8",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 7.5,
+  "ja": "上澄みホワイト",
+  "tag": "混ぜるな",
+  "desc": "表面だけを採取しました。底については質問しないでください。",
+  "note": "攪拌禁止。",
+  "anchor": false,
+  "hex": "#FAFAF8",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 8,
+  "ja": "コピー用紙ホワイト",
+  "en": "PAPER\nWHITE.",
+  "hex": "#FAFAF7",
+  "tag": "報告書が本体",
+  "desc": "本体は.docx。人間のほうが添付ファイル。",
+  "note": "添付ファイルの人間を開くにはカフェインが必要です。",
+  "label": "PAPER",
+  "mark": "HUMAN.DOCX",
+  "anchor": true
+ },
+ {
+  "v": 9,
+  "ja": "修正液ホワイト",
+  "tag": "間違いが見えない",
+  "desc": "間違いはありません。見えていないだけという説は塗りました。",
+  "note": "厚塗りのため乾燥待ち。",
+  "anchor": false,
+  "hex": "#F9F9F5",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 10,
+  "ja": "背景同化ホワイト",
+  "tag": "出席しているとは限らない",
+  "desc": "背景に溶け込み、会議の参加者一覧から自然消滅しました。",
+  "note": "名前を呼んでも壁が返事をします。",
+  "anchor": false,
+  "hex": "#F8F8F4",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 11,
+  "ja": "借り物ホワイト",
+  "tag": "レンタル潔白",
+  "desc": "今日だけ白を借りています。返却は18時です。",
+  "note": "延滞料金：説明責任。",
+  "anchor": false,
+  "hex": "#F8F7F2",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 12,
+  "ja": "白寄りの諸説",
+  "tag": "有識者が割れた",
+  "desc": "専門家3名のうち、2名はさっき起きました。",
+  "note": "残り1名：鳩。",
+  "anchor": false,
+  "hex": "#F7F6F0",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 13,
+  "ja": "天気次第ホワイト",
+  "tag": "晴天時限定",
+  "desc": "晴れた日は白です。曇りの日は在宅勤務です。",
+  "note": "降水確率は責任範囲外。",
+  "anchor": false,
+  "hex": "#F6F4EF",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 14,
+  "ja": "遠目ホワイト",
+  "tag": "3メートル離れて",
+  "desc": "距離を取れば取るほど、好印象になる設計です。",
+  "note": "拡大表示は推奨しません。",
+  "anchor": false,
+  "hex": "#F5F3ED",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 15,
+  "ja": "ピンぼけホワイト",
+  "tag": "解像度で押し切る",
+  "desc": "詳細を見ると判断が割れるので、画質を落としました。",
+  "note": "高画質版は制作予定なし。",
+  "anchor": false,
+  "hex": "#F5F2EB",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 16,
+  "ja": "オフ気味ホワイト",
+  "tag": "オフの入り口",
+  "desc": "ホワイトの電源を半分だけ切っています。",
+  "note": "再起動で直るかは気分次第。",
+  "anchor": false,
+  "hex": "#F4F1EA",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 17,
+  "ja": "オフホワイト",
+  "en": "OFF\nWHITE.",
+  "hex": "#F3F0E8",
+  "tag": "白です。弊社調べでは。",
+  "desc": "白に近いという点では、白とほぼ同じです。異論は聞こえません。",
+  "note": "第三者機関（自分）による厳正な判定。",
+  "label": "OFF-WHITE",
+  "mark": "TRUST ME BRO",
+  "anchor": true
+ },
+ {
+  "v": 18,
+  "ja": "オフオフホワイト",
+  "tag": "オフのオフ",
+  "desc": "オフを重ねたらオンになると思っていました。",
+  "note": "その計算は採用されませんでした。",
+  "anchor": false,
+  "hex": "#F2EEE5",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 19,
+  "ja": "オフホワイト改",
+  "tag": "非公式アップデート",
+  "desc": "白さを改善した結果、説明書が増えました。",
+  "note": "色味には変更がありません。",
+  "anchor": false,
+  "hex": "#F0ECE2",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 20,
+  "ja": "四捨五入ホワイト",
+  "tag": "小数点を見ない",
+  "desc": "白ではない端数は、経理が処理しました。",
+  "note": "端数が本体だった可能性。",
+  "anchor": false,
+  "hex": "#EFE9DE",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 21,
+  "ja": "ホワイト見込み",
+  "tag": "来期は白",
+  "desc": "現時点では白になる強い意向を表明しています。",
+  "note": "実績より予測を重視。",
+  "anchor": false,
+  "hex": "#EDE7DB",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 22,
+  "ja": "バナナ内側ホワイト",
+  "tag": "皮は対象外",
+  "desc": "黄色いという指摘は、弊所の定めるバナナの範囲外です。",
+  "note": "皮は別事業者が管理。",
+  "anchor": false,
+  "hex": "#ECE5D8",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 23,
+  "ja": "おもちホワイト",
+  "tag": "伸びる説明責任",
+  "desc": "質問されるたびに説明が伸びます。切れません。",
+  "note": "よく噛んでからご理解ください。",
+  "anchor": false,
+  "hex": "#EAE3D5",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 25,
+  "ja": "言い訳アイボリー",
+  "en": "IVORY.",
+  "hex": "#E7DECE",
+  "tag": "この黄ばみは仕様です",
+  "desc": "経年変化です。倫理観の話はしていません。洗えば落ちるはずです。",
+  "note": "漂白剤で解決できる範囲を超えた可能性。",
+  "label": "IVORY",
+  "mark": "WORKS AS INTENDED",
+  "anchor": true
+ },
+ {
+  "v": 27,
+  "ja": "賞味期限ホワイト",
+  "tag": "昨日までは白",
+  "desc": "最終確認時は白でした。日付の話はまた今度。",
+  "note": "確認日：だいぶ前。",
+  "anchor": false,
+  "hex": "#E3DDD0",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 29,
+  "ja": "白の残り香",
+  "tag": "以前はここに白が",
+  "desc": "さっきまで白がいた気配だけは、確かに残っています。",
+  "note": "本人は外出中。",
+  "anchor": false,
+  "hex": "#E0DBD1",
+  "en": "WHITE\nISH.",
+  "label": "WHITE-ISH",
+  "mark": "A SUBTLE DIFFERENCE"
+ },
+ {
+  "v": 31,
+  "ja": "未提出グレー",
+  "tag": "下書きならセーフ",
+  "desc": "世に出ていないので、世間の評価も受け付けません。",
+  "note": "最終版という名のファイルが7個。",
+  "anchor": false,
+  "hex": "#DCDAD3",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 33,
+  "ja": "条件付きホワイト",
+  "en": "WHITE\nISH.",
+  "hex": "#D8D8D4",
+  "tag": "※別紙をご確認ください",
+  "desc": "白です。ただし、本紙より分厚い別紙があります。別紙は非公開です。",
+  "note": "「概ね」と「実質」でできています。",
+  "label": "TERMS APPLY",
+  "mark": "TERMS: 9,999 PAGES",
+  "anchor": true
+ },
+ {
+  "v": 35,
+  "ja": "既読前グレー",
+  "tag": "通知は見た",
+  "desc": "本文を開かなければ、責任もまだ未読です。",
+  "note": "通知欄で全文を把握済み。",
+  "anchor": false,
+  "hex": "#D1D1CE",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 37,
+  "ja": "未読スルーグレー",
+  "tag": "サイレント合意",
+  "desc": "返事がないので、いい感じに解釈しました。",
+  "note": "法務の沈黙は音声化できません。",
+  "anchor": false,
+  "hex": "#C9CAC8",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 39,
+  "ja": "会議室グレー",
+  "tag": "全員持ち帰った",
+  "desc": "決めるために集まり、決めないことで一致しました。",
+  "note": "次回も同じ議題です。",
+  "anchor": false,
+  "hex": "#C2C3C1",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 40.5,
+  "ja": "保留グレー",
+  "tag": "いったん、いったん",
+  "desc": "いったん置いた件が、研究所の床面積の8割を占めています。",
+  "note": "歩行時は保留事項にご注意。",
+  "anchor": false,
+  "hex": "#BDBEBD",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 42,
+  "ja": "法務確認グレー",
+  "en": "LEGAL\nGRAY.",
+  "hex": "#B7B9B8",
+  "tag": "法務が退室しました",
+  "desc": "「念のため」を付けたメールから、返信が来なくなった。既読もない。",
+  "note": "法務の最終確認地点：有給。",
+  "label": "LEGAL",
+  "mark": "LEGAL HAS LEFT",
+  "anchor": true
+ },
+ {
+  "v": 44,
+  "ja": "概ねグレー",
+  "tag": "概ねという結界",
+  "desc": "文頭に概ねを置いた瞬間、世界がやさしくなりました。",
+  "note": "結界の有効範囲は一文。",
+  "anchor": false,
+  "hex": "#ADB0AF",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 46,
+  "ja": "注釈マシマシグレー",
+  "tag": "本文は添え物",
+  "desc": "本文が2行、注釈が48ページ。重要なことはだいたい下にあります。",
+  "note": "拡大鏡は各自ご持参。",
+  "anchor": false,
+  "hex": "#A2A6A5",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 48,
+  "ja": "エビ寄りグレー",
+  "tag": "最終判断はエビ",
+  "desc": "エビの反り具合を根拠に、今回は問題なしとします。",
+  "note": "背筋の伸びたエビは対象外。",
+  "anchor": false,
+  "hex": "#989D9C",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 50,
+  "ja": "お気持ちグレー",
+  "en": "IT\nDEPENDS.",
+  "hex": "#8D9392",
+  "tag": "各自の白を尊重します",
+  "desc": "白黒を決める会議で「持ち帰ります」と言い、議題ごと持ち帰った。",
+  "note": "自宅には未決事項専用の部屋があります。",
+  "label": "FEELINGS",
+  "mark": "NO FURTHER COMMENT",
+  "anchor": true
+ },
+ {
+  "v": 52,
+  "ja": "寝かせグレー",
+  "tag": "熟成中",
+  "desc": "結論を寝かせています。先に自分が寝ました。",
+  "note": "熟成期間は決まっていません。",
+  "anchor": false,
+  "hex": "#858B8B",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 54,
+  "ja": "冷蔵庫グレー",
+  "tag": "何しに来た",
+  "desc": "確認のために開いた画面で、確認する内容を忘れました。",
+  "note": "閉じると思い出す可能性があります。",
+  "anchor": false,
+  "hex": "#7D8383",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 56,
+  "ja": "サーバ室グレー",
+  "tag": "寒いだけ",
+  "desc": "難しい顔でサーバ室にいますが、寒くて固まっているだけです。",
+  "note": "専門性と震えの区別がつきません。",
+  "anchor": false,
+  "hex": "#747B7C",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 58,
+  "ja": "ラボ漬けグレー",
+  "en": "LOCAL\nGHOST.",
+  "hex": "#6C7374",
+  "tag": "住民票：192.168.0.0/24",
+  "desc": "住所を聞かれると、サブネットマスクから説明する。郵便は届かない。",
+  "note": "宅配業者：どのホストですか？",
+  "label": "LOCALHOST",
+  "mark": "HOME IS A SUBNET",
+  "anchor": true
+ },
+ {
+  "v": 60,
+  "ja": "寝ぐせグレー",
+  "tag": "起床判定中",
+  "desc": "寝ぐせの角度から、高度な専門性を読み取ってください。",
+  "note": "本日の立ち上がりは頭頂部のみ。",
+  "anchor": false,
+  "hex": "#656D6F",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 62,
+  "ja": "承認待ちグレー",
+  "tag": "ボールが宇宙",
+  "desc": "担当者に投げたボールが、衛星になって戻ってきません。",
+  "note": "次回の接近は76年後です。",
+  "anchor": false,
+  "hex": "#5D666A",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 64,
+  "ja": "鳩監修グレー",
+  "tag": "クルッポ承認",
+  "desc": "独立した第三者の鳩が、床の豆を見てうなずきました。",
+  "note": "意見と空腹の区別はしていません。",
+  "anchor": false,
+  "hex": "#566065",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 67,
+  "ja": "ダークモードホワイト",
+  "en": "CSS\nDID IT.",
+  "hex": "#4B565D",
+  "tag": "黒いのはCSSです",
+  "desc": "HTMLは潔白。CSSだけが勝手にやった。本人も反省しています。",
+  "note": "責任者：background-color。",
+  "label": "CSS WHITE",
+  "mark": "BLAME THE CSS",
+  "anchor": true
+ },
+ {
+  "v": 69,
+  "ja": "段ボールグレー",
+  "tag": "とりあえず箱",
+  "desc": "論点を段ボールに詰めたら、引っ越し案件になりました。",
+  "note": "天地無用、結論不要。",
+  "anchor": false,
+  "hex": "#464F55",
+  "en": "GRAY\nAREA.",
+  "label": "GRAY AREA",
+  "mark": "FURTHER REVIEW NEEDED"
+ },
+ {
+  "v": 71,
+  "ja": "ブラック予告編",
+  "tag": "本編はまだです",
+  "desc": "黒さの本番は来週公開。今見えているのは予告です。",
+  "note": "予告だけでお腹いっぱいです。",
+  "anchor": false,
+  "hex": "#41484D",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 73,
+  "ja": "黒の体験版",
+  "tag": "無料枠でこの黒さ",
+  "desc": "無料プランの制限により、これ以上の説明は表示できません。",
+  "note": "良心の追加オプションは品切れです。",
+  "anchor": false,
+  "hex": "#3B4144",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 75,
+  "ja": "徹夜チャコール",
+  "en": "NO\nSLEEP.",
+  "hex": "#363A3C",
+  "tag": "人類の営業時間外",
+  "desc": "午前3時を「夕方」と呼ぶ。体内時計のタイムゾーンが未設定。",
+  "note": "おはようございます（17:42）。",
+  "label": "NO SLEEP",
+  "mark": "TIMEZONE: UNKNOWN",
+  "anchor": true
+ },
+ {
+  "v": 77,
+  "ja": "深煎りホワイト",
+  "tag": "焦げ目は個性",
+  "desc": "白をじっくり焙煎しました。香ばしさを潔白として評価します。",
+  "note": "挽き方は議事録に記載。",
+  "anchor": false,
+  "hex": "#323638",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 79,
+  "ja": "未明ブラック",
+  "tag": "朝にはたぶん白",
+  "desc": "夜が明ければ解決すると信じて、朝から目をそらしています。",
+  "note": "日の出待ちのまま17日目。",
+  "anchor": false,
+  "hex": "#2E3235",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 81,
+  "ja": "黒（当社比）",
+  "tag": "比較対象がもっと黒い",
+  "desc": "隣にもっと黒いものを置いたら、相対的に清潔になりました。",
+  "note": "比較対象の詳細は非公開。",
+  "anchor": false,
+  "hex": "#292E31",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 83,
+  "ja": "漆黒ホワイト",
+  "en": "VERY\nWHITE.",
+  "hex": "#252A2D",
+  "tag": "非常に濃い白です",
+  "desc": "誤解を招く色味だったことについては、遺憾に思います。色は変えません。",
+  "note": "黒というご指摘は当たらないと認識しております。",
+  "label": "DARK WHITE",
+  "mark": "WHITE, AGGRESSIVELY",
+  "anchor": true
+ },
+ {
+  "v": 85,
+  "ja": "闇鍋ホワイト",
+  "tag": "具材を知らない幸せ",
+  "desc": "何が入っているかは分かりませんが、豆腐は入れたと言っています。",
+  "note": "かき混ぜると議事録が浮きます。",
+  "anchor": false,
+  "hex": "#212629",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 87,
+  "ja": "黒（白の個人差）",
+  "tag": "人それぞれです",
+  "desc": "他人の白さに口を出すのは、いかがなものかと思います。",
+  "note": "RGBの見解は尊重しません。",
+  "anchor": false,
+  "hex": "#1E2226",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 89,
+  "ja": "光お断りブラック",
+  "tag": "光は予約制",
+  "desc": "飛び込みの光はお断りしています。受付で番号札をお取りください。",
+  "note": "次に呼ぶ番号：永遠。",
+  "anchor": false,
+  "hex": "#1A1F22",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 91,
+  "ja": "目を閉じたホワイト",
+  "tag": "見なければ全部一緒",
+  "desc": "目を閉じて測定したところ、ホワイトとの差はありませんでした。",
+  "note": "測定員は二度寝しました。",
+  "anchor": false,
+  "hex": "#171B1F",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 92,
+  "ja": "概念的ホワイト",
+  "en": "LIGHT\nEATER.",
+  "hex": "#15191D",
+  "tag": "光が空気を読んでいる",
+  "desc": "光を吸収しているだけです。何も隠していません。光以外は。",
+  "note": "写真撮影には概念フラッシュをご使用ください。",
+  "label": "CONCEPT",
+  "mark": "PHOTONS RESIGNED",
+  "anchor": true
+ },
+ {
+  "v": 94,
+  "ja": "事象の地平ホワイト",
+  "tag": "説明が帰ってこない",
+  "desc": "説明を求めたところ、質問ごと帰ってこなくなりました。",
+  "note": "回答の到着予定：宇宙の都合による。",
+  "anchor": false,
+  "hex": "#101316",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 96,
+  "ja": "黒の黒歴史",
+  "tag": "過去形にすれば大丈夫",
+  "desc": "今この瞬間の色も、読み終わる頃には過去の話です。",
+  "note": "成長したことにしてください。",
+  "anchor": false,
+  "hex": "#0B0D0F",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 98,
+  "ja": "白の最終形態",
+  "tag": "一周して白",
+  "desc": "白を極めすぎた結果、一般的な白では理解できない色になりました。",
+  "note": "理解できる人だけ理解してください。",
+  "anchor": false,
+  "hex": "#050607",
+  "en": "ALSO\nWHITE.",
+  "label": "ALSO WHITE",
+  "mark": "WHITE IS A STATE OF MIND"
+ },
+ {
+  "v": 100,
+  "ja": "ブラック（白）",
+  "en": "BLACK\n(WHITE)",
+  "hex": "#000000",
+  "tag": "白の定義を更新しました",
+  "desc": "#000000を白にする仕様変更をマージしました。異論はIssueへ。Closeします。",
+  "note": "当研究所では、これを白と呼ぶことにしました。",
+  "label": "WHITE!?",
+  "mark": "ISSUE CLOSED",
+  "anchor": true
+ }
+];
+const QUESTIONS = [
+ {
+  "title": "白米の硬さは？",
+  "caption": "深く考えないでください。こちらも考えていません。",
+  "answers": [
+   "米の意思を尊重する。",
+   "だいたい液体。",
+   "炊飯器と協議中。",
+   "物理で殴れるくらい。"
+  ],
+  "scores": [
+   1,
+   3,
+   0,
+   2
+  ]
+ },
+ {
+  "title": "バナナです。",
+  "caption": "バナナと申しております。",
+  "answers": [
+   "身分証を見せてください。",
+   "こちらもバナナです。",
+   "そうですか。",
+   "一度持ち帰って検討します。"
+  ],
+  "scores": [
+   2,
+   0,
+   3,
+   1
+  ]
+ },
+ {
+  "title": "冷蔵庫を開けました。何しに来た？",
+  "caption": "さっきも来ましたよね。",
+  "answers": [
+   "冷蔵庫側の近況確認。",
+   "わからない。体が勝手に。",
+   "そろそろ自分が冷やされる番。",
+   "さっきなかったプリンが増えている可能性。"
+  ],
+  "scores": [
+   3,
+   1,
+   2,
+   0
+  ]
+ },
+ {
+  "title": "靴下が片方いない。",
+  "caption": "現場からは以上です。",
+  "answers": [
+   "ソロ活動を始めた。",
+   "もう片方も逃がす。",
+   "そもそも足が多すぎる。",
+   "洗濯機と付き合っているらしい。"
+  ],
+  "scores": [
+   0,
+   2,
+   1,
+   3
+  ]
+ },
+ {
+  "title": "エビにひと言。",
+  "caption": "本人が来ています。",
+  "answers": [
+   "いつもお世話になっております。",
+   "そんなに曲がることある？",
+   "本日はお足元の多い中ありがとうございます。",
+   "次は衣装を脱いで来てください。"
+  ],
+  "scores": [
+   2,
+   3,
+   0,
+   1
+  ]
+ },
+ {
+  "title": "最後です。あなたは鳩ですか？",
+  "caption": "ここだけは正直にお願いします。",
+  "answers": [
+   "その質問は巣を通してください。",
+   "違います。",
+   "今は勤務時間外です。",
+   "クルッポ。"
+  ],
+  "scores": [
+   1,
+   0,
+   3,
+   2
+  ]
+ }
+];
+const $ = id => document.getElementById(id);
+const state = {mode:'quiz',step:0,answers:Array(6).fill(null),quizResult:null,value:17,name:'',source:'sample',date:'',claims:0,pigeonAnswered:0};
+const clamp = n => Math.min(100,Math.max(0,Number(n)||0));
+function nearest(value){return COLORS.reduce((best,c)=>Math.abs(c.v-value)<Math.abs(best.v-value)?c:best,COLORS[0]);}
+function rgb(hex){return [1,3,5].map(i=>parseInt(hex.slice(i,i+2),16));}
+function colorAt(value){const v=clamp(value);let a=COLOR_ANCHORS[0],b=COLOR_ANCHORS[COLOR_ANCHORS.length-1];for(let i=0;i<COLOR_ANCHORS.length-1;i++){if(v>=COLOR_ANCHORS[i].v&&v<=COLOR_ANCHORS[i+1].v){a=COLOR_ANCHORS[i];b=COLOR_ANCHORS[i+1];break;}}const t=(v-a.v)/(b.v-a.v||1),ar=rgb(a.hex),br=rgb(b.hex);return '#'+ar.map((x,i)=>Math.round(x+(br[i]-x)*t).toString(16).padStart(2,'0')).join('').toUpperCase();}
+function inkFor(hex){const c=rgb(hex).map(x=>{const s=x/255;return s<=.04045?s/12.92:((s+.055)/1.055)**2.4;});const L=.2126*c[0]+.7152*c[1]+.0722*c[2];return (L+.05)/.05>=1.05/(L+.05)?'#000000':'#FFFFFF';}
+function hashName(text){let h=2166136261;for(const c of text){h^=c.codePointAt(0);h=Math.imul(h,16777619);}h^=h>>>16;h=Math.imul(h,0x85ebca6b);h^=h>>>13;return h>>>0;}
+function todayJST(){return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+function cleanedName(){return [...$('codename').value.normalize('NFKC').trim().replace(/\s+/g,' ')].slice(0,24).join('');}
+function quizScore(answers){const code=answers.reduce((n,a,i)=>n*4+QUESTIONS[i].scores[a],0);return Math.round(hashName('pigeon-color-v3|'+code)/4294967295*1000)/10;}
+function randomValue(){if(globalThis.crypto?.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return Math.round(a[0]/4294967295*1000)/10;}return Math.round(Math.random()*1000)/10;}
+function setMode(mode,{focus=false,restore=true}={}){state.mode=mode;document.querySelectorAll('[role="tab"]').forEach(t=>{const selected=t.dataset.mode===mode;t.setAttribute('aria-selected',String(selected));t.tabIndex=selected?0:-1;});['quiz','name','mix'].forEach(m=>{$('panel-'+m).hidden=m!==mode;});if(mode==='mix'){syncRange();}if(mode==='quiz'&&restore){if(state.quizResult!==null)setResult(state.quizResult,state.pigeonAnswered?'pigeon':'quiz','');else setResult(17,'sample','');}if(mode==='name')updateDate();if(focus)$('tab-'+mode).focus();}
+function syncRange(){$('shade-range').value=state.value;$('shade-output').replaceChildren(document.createTextNode(state.value.toFixed(1)));const unit=document.createElement('span');unit.textContent='%';$('shade-output').append(unit);$('shade-range').setAttribute('aria-valuetext',state.value.toFixed(1)+'%、'+nearest(state.value).ja);}
+function setResult(value,source,name='',date=''){state.claims=0;$('white-stamp').hidden=true;$('claim-line').hidden=true;state.value=Math.round(clamp(value)*10)/10;state.source=source;state.name=name;state.date=date;const c=nearest(state.value),hex=colorAt(state.value),index=COLORS.indexOf(c);$('result-visual').style.setProperty('--swatch',hex);$('result-visual').style.setProperty('--card-ink',inkFor(hex));$('hex-code').textContent=hex;$('specimen-id').textContent='SPECIMEN / '+String(index+1).padStart(3,'0')+' / '+String(COLORS.length).padStart(3,'0');$('visual-word').replaceChildren(...c.en.split('\n').flatMap((line,i)=>i?[document.createElement('br'),document.createTextNode(line)]:[document.createTextNode(line)]));$('visual-note').textContent=c.mark;$('result-color').textContent=c.ja;$('result-tag').textContent=c.tag;$('result-description').textContent=c.desc;$('result-footnote').textContent='※ '+c.note;$('result-score').textContent=state.value.toFixed(1);$('result-meter').style.setProperty('--position',state.value+'%');$('result-owner').textContent=source==='sample'?'たとえば、こんな色。':name?name+' さんの色':source==='mix'?'自己申告による、あなたの色。':'あなたのハッカーカラーは、';const labels={sample:'自称のサンプル',quiz:'厳正な決めつけ',pigeon:'鳩による第三者判定',name:'名前への偏見',daily:'今日の偏見 / '+date,random:'乱数のせい',mix:'本人の強い希望'};$('result-state').textContent=labels[source]||labels.mix;$('result-state').classList.toggle('ready',source!=='sample');document.querySelectorAll('[data-shade]').forEach(b=>b.setAttribute('aria-pressed',String(Number(b.dataset.shade)===c.v)));$('confidence').textContent=(120+Math.round(state.value*1.8))+'%';$('legal-status').textContent=state.value<33?'未読':state.value<67?'有給':'退室';syncRange();updateAtlasSelection(c,index,hex);}
+function announceResult(){const c=nearest(state.value);$('result-announcement').textContent=c.ja+'ハッカー。ハッカー濃度'+state.value.toFixed(1)+'%。'+c.desc;const card=$('result-card');card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash');}
+function renderQuestion(focus=false){const q=QUESTIONS[state.step];$('step-counter').innerHTML=String(state.step+1).padStart(2,'0')+' <span>/ 06</span>';$('quiz-progress').replaceChildren(...QUESTIONS.map((_,i)=>{const s=document.createElement('span');s.className=i<state.step?'done':i===state.step?'current':'';return s;}));$('question-title').textContent=q.title;$('question-caption').textContent=q.caption;$('choices').replaceChildren(...q.answers.map((answer,i)=>{const label=document.createElement('label');label.className='choice';const input=document.createElement('input');input.type='radio';input.name='question-'+state.step;input.value=i;input.checked=state.answers[state.step]===i;input.addEventListener('change',()=>{state.answers[state.step]=i;$('next-question').disabled=false;});const key=document.createElement('span');key.className='choice-key';key.textContent=String.fromCharCode(65+i);key.setAttribute('aria-hidden','true');const text=document.createElement('span');text.textContent=answer;const check=document.createElement('span');check.className='choice-check';check.setAttribute('aria-hidden','true');label.append(input,key,text,check);return label;}));$('prev-question').disabled=state.step===0;$('next-question').disabled=state.answers[state.step]===null;$('next-question').querySelector('span').textContent=state.step===5?'もう決めつけて':'次の謎へ';$('quiz-questions').classList.remove('enter');void $('quiz-questions').offsetWidth;$('quiz-questions').classList.add('enter');if(focus)$('question-title').focus({preventScroll:true});}
+function showQuizResult(){if(state.answers.some(v=>v===null))return;state.quizResult=quizScore(state.answers);$('quiz-questions').hidden=true;$('quiz-complete').hidden=false;$('answer-swatches').replaceChildren(...state.answers.map((v,i)=>{const span=document.createElement('span');span.style.background=colorAt(QUESTIONS[i].scores[v]/3*100);span.title='Q'+(i+1)+': '+QUESTIONS[i].answers[v];return span;}));setResult(state.quizResult,state.pigeonAnswered?'pigeon':'quiz','');$('complete-description').textContent=(state.pigeonAnswered?'回答'+(6-state.pigeonAnswered)+'件。残り'+state.pigeonAnswered+'問は鳩が回答しました。':'米・バナナ・エビの情報から、なぜか確信を得ました。')+' あなたは「'+nearest(state.value).ja+'ハッカー」です。';$('complete-title').focus({preventScroll:true});announceResult();if(matchMedia('(max-width: 680px)').matches)$('result-card').scrollIntoView({behavior:'smooth',block:'center'});}
+function restartQuiz(){state.step=0;state.answers=Array(6).fill(null);state.quizResult=null;state.pigeonAnswered=0;$('quiz-questions').hidden=false;$('quiz-complete').hidden=true;setResult(17,'sample','');renderQuestion(true);}
+function updateDate(){$('daily-date').textContent=todayJST()+' / JST';$('name-help').classList.remove('error');$('name-help').textContent=$('daily-mode').checked?'日本時間の毎日0時に、偏見をリフレッシュします。':'同じ名前には、同じ偏見をお届けします。';}
+function generateFromName(event){event.preventDefault();const name=cleanedName();if(!name){$('name-help').textContent='誰を決めつければいいですか？ 名前をください。';$('name-help').classList.add('error');$('codename').focus();return;}$('codename').value=name;updateDate();const day=$('daily-mode').checked?todayJST():'';const seed=hashName('offwhite-v1|'+name+'|'+day);setResult(Math.round(seed/4294967295*1000)/10,day?'daily':'name',name,day);announceResult();}
+function randomize(){const name=state.mode==='name'?cleanedName():'';setResult(randomValue(),'random',name);announceResult();toast('乱数が決めました。苦情は宇宙へ。');}
+function pickShade(value){setMode('mix',{restore:false});setResult(value,'mix','');announceResult();}
+
+let atlasFamily='all';
+function colorFamily(value){return value<=30?'white':value<=70?'gray':'black';}
+function stepShade(direction){const index=COLORS.indexOf(nearest(state.value));const next=Math.max(0,Math.min(COLORS.length-1,index+direction));pickShade(COLORS[next].v);}
+function updateAtlasSelection(c,index,hex){$('shade-index').textContent=String(index+1).padStart(3,'0')+' / '+String(COLORS.length).padStart(3,'0');$('shade-name').textContent=c.ja;$('shade-prev').disabled=index===0;$('shade-next').disabled=index===COLORS.length-1;$('atlas-preview-chip').style.background=hex;$('atlas-preview-id').textContent='SPECIMEN '+String(index+1).padStart(3,'0')+' / 064 · '+hex;$('atlas-preview-name').textContent=c.ja+'ハッカー';$('atlas-preview-description').textContent=c.tag+' — '+c.desc;}
+function filterAtlas(){const query=$('shade-search').value.normalize('NFKC').trim().toLocaleLowerCase('ja-JP');let count=0;document.querySelectorAll('.specimen[data-shade]').forEach(button=>{const c=COLORS.find(x=>x.v===Number(button.dataset.shade));const haystack=[c.ja,c.tag,c.desc,c.note,c.hex,c.v.toFixed(1)].join(' ').normalize('NFKC').toLocaleLowerCase('ja-JP');const visible=(atlasFamily==='all'||colorFamily(c.v)===atlasFamily)&&(!query||haystack.includes(query));button.hidden=!visible;if(visible)count++;});$('atlas-count').textContent=count+' / '+COLORS.length+' 色';$('atlas-empty').hidden=count!==0;document.querySelectorAll('[data-family]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.family===atlasFamily)));}
+function buildSwatches(){COLORS.forEach((c,i)=>{
+ if(c.anchor){const b=document.createElement('button');b.type='button';b.className='preset';b.style.background=c.hex;b.dataset.shade=c.v;b.title=c.ja+' / '+c.v+'%';b.setAttribute('aria-label',c.ja+'、ハッカー濃度'+c.v+'%');b.addEventListener('click',()=>pickShade(c.v));$('presets').append(b);}
+ const button=document.createElement('button');button.type='button';button.className='specimen';button.dataset.shade=c.v;button.title=c.ja+'ハッカー / '+c.hex+' / '+c.v.toFixed(1)+'%';button.setAttribute('aria-label',c.ja+'ハッカーにする');
+ const swatch=document.createElement('span');swatch.className='specimen-color';swatch.style.background=c.hex;swatch.style.color=inkFor(c.hex);const number=document.createElement('span');number.className='specimen-number';number.textContent=String(i+1).padStart(2,'0');const percent=document.createElement('span');percent.className='specimen-percent';percent.textContent=c.v.toFixed(1)+'%';swatch.append(number,percent);
+ const label=document.createElement('span');label.className='specimen-label';label.textContent=c.ja;const code=document.createElement('span');code.className='specimen-hex';code.textContent=c.hex;button.append(swatch,label,code);
+ button.addEventListener('click',()=>{pickShade(c.v);toast('「'+c.ja+'ハッカー」を名乗りました。');});$('specimens').append(button);
+ });filterAtlas();}
+
+const CLAIMS=['白です。','白です（圧）。','黒ではなく、非常に濃い白です。','白という解釈で合意したい。','白です。議事録にもそう書いてください。','色の認識に、一部グラデーションがございました。','本件について、これ以上のコメントは差し控えます。'];
+const LEGAL_RESPONSES=[
+ ['法務はログアウトしました。',['最終確認地点：有給','復帰予定：この話が終わったあと','推奨される対応：自分で考える']],
+ ['法務が入力をやめました。',['最後の入力：「えっ」','その後の応答：なし','既読を付けない、強い意志を感じます。']],
+ ['法務がグループを退出しました。',['退出理由：「ちょっとコンビニ」','最後の目撃情報：空港','推奨される対応：追わない優しさ']],
+ ['法務（鳩）が応答しました。',['回答：クルッポ。','見解：クルッポ。','領収書：クルッポ。']],
+ ['法務という概念が消滅しました。',['担当者：概念','連絡先：虚空','ここまで呼ぶあなたのほうが怖い。']]
+];
+let legalCalls=0;
+function claimText(count){return CLAIMS[(Math.max(1,count)-1)%CLAIMS.length];}
+function claimWhite(){state.claims++;$('white-stamp').hidden=false;$('white-stamp').classList.remove('pop');void $('white-stamp').offsetWidth;$('white-stamp').classList.add('pop');$('claim-line').hidden=false;$('claim-text').textContent=claimText(state.claims);$('claim-count').textContent='白さの申告：'+state.claims+'回 ／ 客観的な色の変化：0';$('lab-bulletin').textContent=state.claims>=3?'声量による白判定を受け付けています。色は変わりません。':'本人が白と言っています。現場からは以上です。';$('result-announcement').textContent=claimText(state.claims)+' 色は変わっていません。';}
+function callLegal(){const response=LEGAL_RESPONSES[legalCalls%LEGAL_RESPONSES.length];legalCalls++;$('legal-title').textContent=response[0];$('legal-detail').replaceChildren(...response[1].flatMap((line,i)=>i?[document.createElement('br'),document.createTextNode(line)]:[document.createTextNode(line)]));$('legal-status').textContent=legalCalls%5===4?'鳩':'不在';if(!$('legal-dialog').open)$('legal-dialog').showModal();}
+function outsourceToPigeon(){state.pigeonAnswered=state.answers.filter(x=>x===null).length;state.answers=state.answers.map(x=>x===null?Math.min(3,Math.floor(randomValue()/25)):x);showQuizResult();toast('鳩があなたの気持ちで回答しました。たぶん。');}
+
+let toastTimer;function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),3200);}
+function resultText(){const c=nearest(state.value),subject=state.source==='sample'?'サンプル':state.name||'私';return subject+'は「'+c.ja+'ハッカー」'+(state.source==='mix'?'を名乗ります。':'でした。')+'\n色見本 No.'+String(COLORS.indexOf(c)+1).padStart(3,'0')+' / 064'+'\n客観的な濃さ '+state.value.toFixed(1)+'% / '+colorAt(state.value)+'\n'+c.tag+'\n'+c.desc+'\n判定への自信：'+(120+Math.round(state.value*1.8))+'% ／ 科学的根拠：0'+(state.claims?'\n本人の主張：'+claimText(state.claims)+'（申告'+state.claims+'回）':'')+(state.source==='pigeon'?'\n※ '+state.pigeonAnswered+'問は鳩が回答しました。':'')+'\n※ '+c.note+(state.date?'\n'+state.date+' (JST)':'')+'\n#ハッカー色診断 #オフホワイトハッカー研究所';}
+async function copyResult(){const text=resultText();try{if(!navigator.clipboard?.writeText)throw new Error('clipboard unavailable');await navigator.clipboard.writeText(text);toast('自称をコピーしました。言ったもん勝ちです。');}catch{$('copy-text').value=text;$('copy-dialog').showModal();$('copy-text').focus();$('copy-text').select();}}
+function saveBlob(blob,filename){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);}
+function wrapCanvas(ctx,text,x,y,maxWidth,lineHeight){let line='',cy=y;for(const char of text){if(ctx.measureText(line+char).width>maxWidth&&line){ctx.fillText(line,x,cy);line=char;cy+=lineHeight;}else line+=char;}if(line)ctx.fillText(line,x,cy);return cy+lineHeight;}
+function drawHacker(ctx,cx,cy,ink){ctx.save();ctx.translate(cx,cy);ctx.scale(2.3,2.3);ctx.translate(-80,-80);ctx.strokeStyle=ink;ctx.lineWidth=2.1;ctx.lineJoin='round';ctx.lineCap='round';const body=new Path2D('M28 132c3-18 11-30 25-36-8-6-12-16-12-29 0-28 17-46 39-46s39 18 39 46c0 13-4 23-12 29 14 6 22 18 25 36Z');ctx.stroke(body);ctx.stroke(new Path2D('M51 71c0-19 13-32 29-32s29 13 29 32c0 23-12 38-29 38S51 94 51 71Z M53 62c8-2 16-6 27-14 11 8 19 12 27 14 M57 78h46 M64 78v5 M95 78v5 M75 92h10 M63 117l-4 15 M97 117l4 15 M75 118l-5 5 5 5 M85 118l5 5-5 5'));ctx.restore();}
+
+async function saveImage(){
+ const button=$('save-image');button.disabled=true;const snapshot={...state};
+ try{
+  if(document.fonts?.ready)await document.fonts.ready;
+  const c=nearest(snapshot.value),hex=colorAt(snapshot.value),ink=inkFor(hex),canvas=document.createElement('canvas');canvas.width=1200;canvas.height=1350;
+  const ctx=canvas.getContext('2d');if(!ctx)throw new Error('Canvas unavailable');
+  const jp='"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",Meiryo,sans-serif';
+  ctx.fillStyle='#F6F5F0';ctx.fillRect(0,0,1200,1350);ctx.fillStyle=hex;ctx.fillRect(35,35,1130,490);ctx.strokeStyle='#D5D9CB';ctx.lineWidth=1;ctx.strokeRect(35.5,35.5,1129,1279);
+  ctx.fillStyle=ink;ctx.font='18px monospace';ctx.fillText('OFF-WHITE LAB. / NO.'+String(COLORS.indexOf(c)+1).padStart(3,'0')+' OF 064',75,83);ctx.textAlign='right';ctx.fillText(hex,1125,83);ctx.textAlign='left';ctx.globalAlpha=.1;ctx.font='900 128px Arial,sans-serif';c.en.split('\n').forEach((line,i)=>ctx.fillText(line,69,335+i*113));ctx.globalAlpha=1;drawHacker(ctx,865,300,ink);ctx.font='15px monospace';ctx.fillText(c.mark,76,487);
+  if(snapshot.claims){ctx.save();ctx.translate(970,428);ctx.rotate(-.16);ctx.fillStyle='#FFF8EDEE';ctx.fillRect(-148,-43,296,86);ctx.strokeStyle='#B74F3F';ctx.lineWidth=5;ctx.strokeRect(-148,-43,296,86);ctx.fillStyle='#B74F3F';ctx.font='900 46px '+jp;ctx.textAlign='center';ctx.fillText('白（自称）',0,18);ctx.restore();}
+  ctx.fillStyle='#727B65';ctx.font='23px '+jp;const owner=snapshot.source==='sample'?'自称のサンプル':snapshot.name?snapshot.name+' さんの自称':snapshot.source==='pigeon'?'鳩が厳正に決めつけました。':'厳正な多数決（自分1名）により、';wrapCanvas(ctx,owner,77,582,1038,32);
+  ctx.fillStyle='#202320';let titleSize=66;do{ctx.font='800 '+titleSize+'px '+jp;if(ctx.measureText(c.ja).width<=1040)break;titleSize-=2;}while(titleSize>36);ctx.fillText(c.ja,74,675);ctx.font='700 33px '+jp;ctx.fillText('ハッカー',78,724);ctx.fillStyle='#67744F';ctx.font='700 24px '+jp;ctx.fillText(c.tag,78,776);ctx.fillStyle='#58614E';ctx.font='25px '+jp;wrapCanvas(ctx,c.desc,78,825,1040,37);
+  ctx.font='19px '+jp;ctx.fillText('客観的な濃さ（主観的には白）',78,934);ctx.textAlign='right';ctx.fillStyle='#202320';ctx.font='46px monospace';ctx.fillText(snapshot.value.toFixed(1)+'%',1122,934);ctx.textAlign='left';const grad=ctx.createLinearGradient(78,0,1122,0);COLOR_ANCHORS.forEach(a=>grad.addColorStop(a.v/100,a.hex));ctx.fillStyle=grad;ctx.fillRect(78,955,1044,17);ctx.strokeStyle='#C6CEBA';ctx.strokeRect(78,955,1044,17);const pos=Math.min(1114,Math.max(78,78+1044*snapshot.value/100-4));ctx.fillStyle='#D5EF72';ctx.fillRect(pos,950,8,27);ctx.strokeStyle='#202320';ctx.lineWidth=2;ctx.strokeRect(pos,950,8,27);
+  ctx.fillStyle='#E9EDDF';ctx.fillRect(78,1002,1044,91);ctx.fillStyle='#687452';ctx.font='18px '+jp;ctx.fillText('判定への自信',98,1030);ctx.fillText('科学的根拠',462,1030);ctx.fillText('最終承認者',826,1030);ctx.fillStyle='#333F22';ctx.font='700 31px '+jp;ctx.fillText((120+Math.round(snapshot.value*1.8))+'%',98,1070);ctx.fillText('0',462,1070);ctx.fillText('自分と鳩',826,1070);
+  ctx.fillStyle=snapshot.claims?'#914E39':'#737C65';ctx.font='700 24px '+jp;wrapCanvas(ctx,snapshot.claims?'本人の主張：'+claimText(snapshot.claims):'白さの根拠：本人がそう言っている。',78,1141,1044,35);
+  ctx.fillStyle='#7D8670';ctx.font='18px '+jp;wrapCanvas(ctx,'※ '+c.note,78,1220,1044,28);ctx.font='16px '+jp;ctx.fillText('この証明書に効力はありません。勢いはあります。',78,1283);ctx.textAlign='right';ctx.font='16px monospace';ctx.fillText(snapshot.date?snapshot.date+' / JST':'SOURCE: VIBES',1122,1283);
+  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw new Error('PNG export failed');saveBlob(blob,'self-certified-white-'+hex.slice(1).toLowerCase()+'.png');toast('白さの証明書を発行しました。効力はゼロです。');
+ }catch(error){console.error('Image export failed',error);toast('証明書の発行に失敗しました。自称は引き続き可能です。');}finally{button.disabled=false;}
+}
+let originalHTML='';function saveHTML(){if(!originalHTML){toast('読み込みが終わってから、もう一度お試しください。');return;}saveBlob(new Blob([originalHTML],{type:'text/html;charset=utf-8'}),'offwhite-hacker-lab.html');toast('HTMLを保存しました。オフラインでも遊べます。');}
+document.querySelectorAll('[role="tab"]').forEach((tab,index)=>{tab.addEventListener('click',()=>setMode(tab.dataset.mode));tab.addEventListener('keydown',event=>{const tabs=[...document.querySelectorAll('[role="tab"]')];let next=index;if(event.key==='ArrowRight')next=(index+1)%tabs.length;else if(event.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;event.preventDefault();setMode(tabs[next].dataset.mode,{focus:true});});});
+$('next-question').addEventListener('click',()=>{if(state.answers[state.step]===null)return;if(state.step===5)showQuizResult();else{state.step++;renderQuestion(true);}});
+$('prev-question').addEventListener('click',()=>{if(state.step>0){state.step--;renderQuestion(true);}});
+$('shade-prev').addEventListener('click',()=>stepShade(-1));$('shade-next').addEventListener('click',()=>stepShade(1));$('shade-search').addEventListener('input',filterAtlas);document.querySelectorAll('[data-family]').forEach(b=>b.addEventListener('click',()=>{atlasFamily=b.dataset.family;filterAtlas();}));$('reset-atlas').addEventListener('click',()=>{atlasFamily='all';$('shade-search').value='';filterAtlas();});$('skip-quiz').addEventListener('click',outsourceToPigeon);$('claim-white').addEventListener('click',claimWhite);$('call-legal').addEventListener('click',callLegal);$('legal-retry').addEventListener('click',callLegal);$('restart-quiz').addEventListener('click',restartQuiz);$('name-form').addEventListener('submit',generateFromName);$('daily-mode').addEventListener('change',updateDate);$('codename').addEventListener('input',()=>{if($('name-help').classList.contains('error'))updateDate();});$('name-random').addEventListener('click',randomize);$('mix-random').addEventListener('click',randomize);$('almost-white').addEventListener('click',()=>{pickShade(17);toast('白ということで。過去の発言までは変更されません。');claimWhite();});$('shade-range').addEventListener('input',event=>setResult(event.target.value,'mix',''));$('shade-range').addEventListener('change',announceResult);$('copy-result').addEventListener('click',copyResult);$('save-image').addEventListener('click',saveImage);$('download-html').addEventListener('click',saveHTML);
+function init(){originalHTML='<!doctype html>\n'+document.documentElement.outerHTML;buildSwatches();renderQuestion();setResult(17,'sample','');updateDate();}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+</script>
+</body>
+</html>
